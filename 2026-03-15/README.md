@@ -31,7 +31,7 @@ Within the IEEE 802.11 parameters, I noticed the following:
 
 This combination indicates that the access point was using WEP encryption rather than WPA/WPA2.
 
-![Identifying 802.11 Encryption Type](wep_beacon_frame.png)
+![Identifying 802.11 Encryption Type](images/wep_beacon_frame.png)
 ### 4. Recovering the WEP Key
 Under the IEEE 802.11 packet details, I observed that the captured traffic contained WEP-encrypted frames. Since the capture contained approximately 15,000 packets, this was sufficient for performing a WEP key recovery attack.
 
@@ -86,14 +86,14 @@ As an alternative approach, I opened the audio file in Audacity and switched to 
 
 The spectrogram revealed a hidden visual message embedded within the audio, which displayed an IP address along with a specific path.
 
-![Spectrogram Analysis](spectrogram_hidden_message.png)
+![Spectrogram Analysis](images/spectrogram_hidden_message.png)
 ### 11. Retrieving the Flag
 
 Using the IP address and path revealed in the spectrogram, I navigated to the location while connected to the access point.
 
 Accessing the endpoint revealed the flag, completing the challenge.
 
-![Found the Flag](flag_page.png)
+![Found the Flag](images/flag_page.png)
 ## Defensive Perspective 
 This challenge exposed several security weaknesses:
 1. Weak Encryption (WEP) – Easily cracked
